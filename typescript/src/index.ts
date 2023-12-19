@@ -56,7 +56,7 @@ const getPlayerAction = (gameState: NoWayOutState): Action => {
   let numpadDirection: NumpadDirection
   let userInput: string 
 
-  // If there is a wall in front of us, rotate
+  // Ask user for input until they choose a direction without a wall.
   while (true) {
     userInput = readlineSync.keyIn('Waiting for user input...', {
       hideEchoBack: true,
